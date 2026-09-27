@@ -3,7 +3,6 @@ import products from '@/constants/product-data';
 import Image from 'next/image';
 
 const prodectDetail = ({ id }: { id: number }) => {
-  debugger;
   const product = products.find((item) => item.id === id);
   if (!product) {
     return <NotFoundPage />;
