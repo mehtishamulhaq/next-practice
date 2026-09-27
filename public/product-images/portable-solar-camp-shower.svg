@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8f6ff"/><stop offset="1" stop-color="#fff3d6"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<ellipse cx="200" cy="345" rx="90" ry="13" fill="#000" opacity=".13"/>
+<circle cx="320" cy="80" r="30" fill="#ffca28"/>
+<line x1="358" y1="80" x2="370" y2="80" stroke="#ffca28" stroke-width="5" stroke-linecap="round"/><line x1="346.8700576850888" y1="106.8700576850888" x2="355.3553390593274" y2="115.35533905932738" stroke="#ffca28" stroke-width="5" stroke-linecap="round"/><line x1="320" y1="118" x2="320" y2="130" stroke="#ffca28" stroke-width="5" stroke-linecap="round"/><line x1="293.1299423149112" y1="106.87005768508881" x2="284.6446609406726" y2="115.35533905932738" stroke="#ffca28" stroke-width="5" stroke-linecap="round"/><line x1="282" y1="80" x2="270" y2="80" stroke="#ffca28" stroke-width="5" stroke-linecap="round"/><line x1="293.1299423149112" y1="53.1299423149112" x2="284.6446609406726" y2="44.64466094067263" stroke="#ffca28" stroke-width="5" stroke-linecap="round"/><line x1="320" y1="42" x2="320" y2="30" stroke="#ffca28" stroke-width="5" stroke-linecap="round"/><line x1="346.8700576850888" y1="53.12994231491119" x2="355.3553390593274" y2="44.644660940672615" stroke="#ffca28" stroke-width="5" stroke-linecap="round"/>
+<path d="M185 60 q15 -25 30 0" fill="none" stroke="#424242" stroke-width="8"/>
+<path d="M110 70 L290 70 L270 240 Q200 262 130 240 Z" fill="#212121"/>
+<path d="M130 85 L270 85 L256 215 Q200 232 144 215 Z" fill="#37474f"/>
+<line x1="150" y1="85" x2="156" y2="220" stroke="#546e7a" stroke-width="2"/><line x1="200" y1="85" x2="200" y2="220" stroke="#546e7a" stroke-width="2"/><line x1="250" y1="85" x2="244" y2="220" stroke="#546e7a" stroke-width="2"/>
+<rect x="165" y="100" width="70" height="26" rx="4" fill="#ffca28"/><text x="200" y="118" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#212121" text-anchor="middle" letter-spacing="1">SOLAR</text>
+<path d="M200 250 q-20 30 0 50" fill="none" stroke="#212121" stroke-width="7"/>
+<path d="M180 300 h40 l8 18 h-56z" fill="#43a047"/>
+<line x1="182" y1="325" x2="176" y2="345" stroke="#4fc3f7" stroke-width="3" stroke-linecap="round"/><line x1="192" y1="325" x2="189" y2="345" stroke="#4fc3f7" stroke-width="3" stroke-linecap="round"/><line x1="202" y1="325" x2="202" y2="345" stroke="#4fc3f7" stroke-width="3" stroke-linecap="round"/><line x1="212" y1="325" x2="215" y2="345" stroke="#4fc3f7" stroke-width="3" stroke-linecap="round"/><line x1="222" y1="325" x2="228" y2="345" stroke="#4fc3f7" stroke-width="3" stroke-linecap="round"/>
+</svg>

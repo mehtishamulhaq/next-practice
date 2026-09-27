@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff2e6"/><stop offset="1" stop-color="#ffd8b8"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<ellipse cx="200" cy="345" rx="120" ry="13" fill="#000" opacity=".13"/>
+<rect x="125" y="150" width="150" height="195" rx="26" fill="#d84315"/>
+<rect x="119" y="112" width="162" height="46" rx="9" fill="#ffb300"/>
+<rect x="129" y="118" width="4" height="34" fill="#000" opacity=".12"/><rect x="149.28571428571428" y="118" width="4" height="34" fill="#000" opacity=".12"/><rect x="169.57142857142856" y="118" width="4" height="34" fill="#000" opacity=".12"/><rect x="189.85714285714286" y="118" width="4" height="34" fill="#000" opacity=".12"/><rect x="210.14285714285714" y="118" width="4" height="34" fill="#000" opacity=".12"/><rect x="230.42857142857142" y="118" width="4" height="34" fill="#000" opacity=".12"/><rect x="250.71428571428572" y="118" width="4" height="34" fill="#000" opacity=".12"/>
+<rect x="125" y="200" width="150" height="110" fill="#fff8e1"/>
+<text x="200" y="242" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="700" fill="#bf360c" text-anchor="middle" letter-spacing="1">TANDOORI</text><text x="200" y="265" font-family="Helvetica, Arial, sans-serif" font-size="11.78" font-weight="400" fill="#bf360c" text-anchor="middle" letter-spacing="1">MARINADE</text>
+<rect x="135" y="170" width="10" height="150" rx="5" fill="#fff" opacity=".28"/><g transform="translate(270 305) rotate(-15)"><path d="M0 0 Q30 -6 50 18 Q24 12 0 8 Z" fill="#e53935"/><rect x="-8" y="0" width="10" height="6" rx="2" fill="#388e3c"/></g><circle cx="95" cy="330" r="10" fill="#fdd835"/><circle cx="112" cy="336" r="7" fill="#fbc02d"/><path d="M0 0 Q18 -16 36 0 Q18 16 0 0 Z" fill="#4caf50" transform="translate(70 305) rotate(-30)"/>
+</svg>

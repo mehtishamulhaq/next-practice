@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbeee8"/><stop offset="1" stop-color="#efd0c2"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<ellipse cx="200" cy="345" rx="120" ry="13" fill="#000" opacity=".13"/>
+<path d="M145 330 L145 195 Q145 150 182 140 L182 95 L218 95 L218 140 Q255 150 255 195 L255 330 Q255 345 240 345 L160 345 Q145 345 145 330 Z" fill="#4e1a0e"/>
+<rect x="178" y="65" width="44" height="36" rx="6" fill="#212121"/>
+<rect x="145" y="210" width="110" height="100" fill="#ffcc80"/>
+<text x="200" y="250" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#4e1a0e" text-anchor="middle" letter-spacing="1">SWEET &amp; SPICY</text><text x="200" y="267" font-family="Helvetica, Arial, sans-serif" font-size="8.06" font-weight="400" fill="#4e1a0e" text-anchor="middle" letter-spacing="1">BBQ SAUCE</text>
+<rect x="155" y="190" width="10" height="150" rx="5" fill="#fff" opacity=".28"/><path d="M265 325 q10 -60 40 -70 q20 -6 26 14 q6 24 -30 58z" fill="#6d2c14"/><rect x="315" y="245" width="8" height="40" rx="4" fill="#f5f5f5" transform="rotate(20 319 265)"/><g transform="translate(70 320) rotate(-10)"><path d="M0 0 Q30 -6 50 18 Q24 12 0 8 Z" fill="#e53935"/><rect x="-8" y="0" width="10" height="6" rx="2" fill="#388e3c"/></g>
+</svg>

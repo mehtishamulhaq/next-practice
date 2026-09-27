@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef8ee"/><stop offset="1" stop-color="#d2ecd4"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<ellipse cx="200" cy="345" rx="140" ry="13" fill="#000" opacity=".13"/>
+<ellipse cx="200" cy="230" rx="140" ry="60" fill="#e64a19"/>
+<ellipse cx="200" cy="218" rx="140" ry="60" fill="#ff7043"/>
+<ellipse cx="200" cy="218" rx="112" ry="46" fill="none" stroke="#ffab91" stroke-width="6"/>
+<g fill="#fff" transform="translate(200 218) scale(1 .45)">
+<ellipse cx="0" cy="20" rx="30" ry="26"/><ellipse cx="-34" cy="-20" rx="12" ry="16"/><ellipse cx="-12" cy="-38" rx="12" ry="16"/><ellipse cx="12" cy="-38" rx="12" ry="16"/><ellipse cx="34" cy="-20" rx="12" ry="16"/></g>
+<g transform="translate(80 320) rotate(-20)"><rect x="0" y="-8" width="60" height="16" rx="8" fill="#fafafa"/><circle cx="0" cy="-8" r="11" fill="#fafafa"/><circle cx="0" cy="8" r="11" fill="#fafafa"/><circle cx="60" cy="-8" r="11" fill="#fafafa"/><circle cx="60" cy="8" r="11" fill="#fafafa"/></g>
+</svg>

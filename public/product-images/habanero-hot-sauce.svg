@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff4e5"/><stop offset="1" stop-color="#ffdcb0"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<ellipse cx="200" cy="345" rx="120" ry="13" fill="#000" opacity=".13"/>
+<path d="M160 330 L160 215 Q160 170 188 160 L188 115 L212 115 L212 160 Q240 170 240 215 L240 330 Q240 345 225 345 L175 345 Q160 345 160 330 Z" fill="#ff6f00"/>
+<rect x="184" y="85" width="32" height="36" rx="6" fill="#b71c1c"/>
+<rect x="160" y="230" width="80" height="100" fill="#212121"/>
+<text x="200" y="270" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffb300" text-anchor="middle" letter-spacing="1">HABANERO</text><text x="200" y="286" font-family="Helvetica, Arial, sans-serif" font-size="7.4399999999999995" font-weight="400" fill="#ffb300" text-anchor="middle" letter-spacing="1">EXTRA HOT</text>
+<rect x="170" y="210" width="10" height="150" rx="5" fill="#fff" opacity=".28"/><g transform="translate(265 285)"><path d="M0 20 q-5 -30 25 -32 q30 2 25 32 q-8 30 -25 30 q-17 0 -25 -30z" fill="#ff8f00"/><rect x="20" y="-18" width="10" height="10" rx="3" fill="#2e7d32"/></g>
+<g transform="translate(85 300)"><path d="M0 20 q-5 -30 25 -32 q30 2 25 32 q-8 30 -25 30 q-17 0 -25 -30z" fill="#e65100"/><rect x="20" y="-18" width="10" height="10" rx="3" fill="#2e7d32"/></g>
+</svg>

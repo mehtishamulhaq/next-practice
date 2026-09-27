@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef9f7"/><stop offset="1" stop-color="#d2eee9"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<ellipse cx="200" cy="345" rx="150" ry="13" fill="#000" opacity=".13"/>
+
+<rect x="70" y="200" width="140" height="140" rx="14" fill="#fff" opacity=".85" stroke="#b2dfdb" stroke-width="3"/>
+<rect x="65" y="188" width="150" height="22" rx="8" fill="#26a69a"/>
+<rect x="80" y="198" width="12" height="18" rx="3" fill="#26a69a"/><rect x="188" y="198" width="12" height="18" rx="3" fill="#26a69a"/>
+<rect x="80" y="220" width="8" height="100" rx="4" fill="#fff" opacity=".28"/>
+<rect x="210" y="230" width="120" height="110" rx="14" fill="#fff" opacity=".85" stroke="#b2dfdb" stroke-width="3"/>
+<rect x="205" y="218" width="130" height="22" rx="8" fill="#ef5350"/>
+<rect x="220" y="228" width="12" height="18" rx="3" fill="#ef5350"/><rect x="308" y="228" width="12" height="18" rx="3" fill="#ef5350"/>
+<rect x="220" y="250" width="8" height="70" rx="4" fill="#fff" opacity=".28"/>
+<rect x="120" y="110" width="110" height="80" rx="14" fill="#fff" opacity=".85" stroke="#b2dfdb" stroke-width="3"/>
+<rect x="115" y="98" width="120" height="22" rx="8" fill="#ffca28"/>
+<rect x="130" y="108" width="12" height="18" rx="3" fill="#ffca28"/><rect x="208" y="108" width="12" height="18" rx="3" fill="#ffca28"/>
+<rect x="130" y="130" width="8" height="40" rx="4" fill="#fff" opacity=".28"/>
+</svg>

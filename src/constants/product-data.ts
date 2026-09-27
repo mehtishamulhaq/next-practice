@@ -1,0 +1,223 @@
+import { Product } from '@/types';
+
+const products: Product[] = [
+  {
+    id: 1,
+    name: 'Coconut Cream',
+    description: 'Rich cream extracted from coconut milk, ideal for desserts.',
+    price: 2.99,
+    image_url: 'coconut-cream.svg',
+  },
+  {
+    id: 2,
+    name: 'Wireless Printer',
+    description: 'Compact wireless printer for home use.',
+    price: 99.99,
+    image_url: 'wireless-printer.svg',
+  },
+  {
+    id: 3,
+    name: 'Dark Chocolate Covered Pretzels',
+    description: 'Crunchy pretzels dipped in rich dark chocolate.',
+    price: 3.99,
+    image_url: 'dark-chocolate-covered-pretzels.svg',
+  },
+  {
+    id: 4,
+    name: 'Cordless Stick Vacuum',
+    description: 'Cordless vacuum cleaner for quick clean-ups.',
+    price: 129.99,
+    image_url: 'cordless-stick-vacuum.svg',
+  },
+  {
+    id: 5,
+    name: 'Lemon Pepper Seasoning',
+    description: 'A zesty seasoning for meats and vegetables.',
+    price: 3.29,
+    image_url: 'lemon-pepper-seasoning.svg',
+  },
+  {
+    id: 6,
+    name: 'Buffalo Wing Sauce',
+    description: 'Spicy sauce perfect for chicken wings and dipping.',
+    price: 3.99,
+    image_url: 'buffalo-wing-sauce.svg',
+  },
+  {
+    id: 7,
+    name: 'Blackberry Compote',
+    description: 'Sweet blackberry compote, perfect for topping desserts.',
+    price: 5.29,
+    image_url: 'blackberry-compote.svg',
+  },
+  {
+    id: 8,
+    name: 'Balsamic Vinaigrette',
+    description: 'Rich and tangy dressing perfect for salads.',
+    price: 2.69,
+    image_url: 'balsamic-vinaigrette.svg',
+  },
+  {
+    id: 9,
+    name: 'Organic Cucumber',
+    description: 'Fresh organic cucumber perfect for salads or snacking.',
+    price: 1.29,
+    image_url: 'organic-cucumber.svg',
+  },
+  {
+    id: 10,
+    name: "Kids' Dinosaur-Themed Lunchbox",
+    description: 'Fun lunchbox for kids with a sturdy design.',
+    price: 19.99,
+    image_url: 'kids-dinosaur-lunchbox.svg',
+  },
+  {
+    id: 11,
+    name: 'Frozen Berry Medley',
+    description:
+      'A mix of strawberries, blueberries, and raspberries, great for smoothies or desserts.',
+    price: 5.49,
+    image_url: 'frozen-berry-medley.svg',
+  },
+  {
+    id: 12,
+    name: 'Organic Coconut Yogurt',
+    description: 'Dairy-free yogurt made from coconut milk.',
+    price: 4.49,
+    image_url: 'organic-coconut-yogurt.svg',
+  },
+  {
+    id: 13,
+    name: 'Shower Curtain Hooks',
+    description: 'Stylish hooks to easily hang shower curtains.',
+    price: 12.99,
+    image_url: 'shower-curtain-hooks.svg',
+  },
+  {
+    id: 14,
+    name: 'Adjustable Dumbbells',
+    description: 'Space-saving adjustable dumbbells for strength training.',
+    price: 249.99,
+    image_url: 'adjustable-dumbbells.svg',
+  },
+  {
+    id: 15,
+    name: 'Portable Solar Camp Shower',
+    description: 'Portable solar shower for camping and outdoor use.',
+    price: 29.99,
+    image_url: 'portable-solar-camp-shower.svg',
+  },
+  {
+    id: 16,
+    name: 'Chickpea Salad Deluxe',
+    description:
+      'Chickpeas mixed with fresh vegetables and herbs, a nutritious snack or salad.',
+    price: 4.29,
+    image_url: 'chickpea-salad-deluxe.svg',
+  },
+  {
+    id: 17,
+    name: 'Snap-On Tupperware Set',
+    description: 'Durable and versatile food storage containers.',
+    price: 34.99,
+    image_url: 'snap-on-tupperware-set.svg',
+  },
+  {
+    id: 18,
+    name: 'Wireless Induction Charger',
+    description:
+      'Qi-certified charger for fast wireless charging of smartphones.',
+    price: 19.99,
+    image_url: 'wireless-induction-charger.svg',
+  },
+  {
+    id: 19,
+    name: 'Tandoori Chicken Marinade',
+    description: 'Delicious and tangy marinade for grilling or baking chicken.',
+    price: 2.49,
+    image_url: 'tandoori-chicken-marinade.svg',
+  },
+  {
+    id: 20,
+    name: 'Cinnamon Spiced Almonds',
+    description:
+      'Crispy almonds coated with cinnamon and sugar for a sweet and crunchy snack.',
+    price: 5.99,
+    image_url: 'cinnamon-spiced-almonds.svg',
+  },
+  {
+    id: 21,
+    name: 'Cocktail Shaker and Mixing Glass Set',
+    description: 'Complete set for mixing cocktails at home.',
+    price: 39.99,
+    image_url: 'cocktail-shaker-set.svg',
+  },
+  {
+    id: 22,
+    name: 'Habanero Hot Sauce',
+    description: 'Fiery hot sauce made with fresh habaneros and spices.',
+    price: 3.79,
+    image_url: 'habanero-hot-sauce.svg',
+  },
+  {
+    id: 23,
+    name: 'Dog Frisbee Toy',
+    description: 'Durable and soft frisbee designed for dogs to play with.',
+    price: 10.99,
+    image_url: 'dog-frisbee-toy.svg',
+  },
+  {
+    id: 24,
+    name: 'Sweet and Spicy Barbecue Sauce',
+    description: 'A flavorful barbecue sauce with a sweet and spicy kick.',
+    price: 3.99,
+    image_url: 'sweet-spicy-barbecue-sauce.svg',
+  },
+  {
+    id: 25,
+    name: 'Rustic Italian Bread',
+    description:
+      'Freshly baked rustic bread, perfect for sandwiches or dipping in olive oil.',
+    price: 3.59,
+    image_url: 'rustic-italian-bread.svg',
+  },
+  {
+    id: 26,
+    name: 'Sliced Provolone Cheese',
+    description: 'Mild cheese great for sandwiches.',
+    price: 3.99,
+    image_url: 'sliced-provolone-cheese.svg',
+  },
+  {
+    id: 27,
+    name: 'Asian Stir-Fry Kit',
+    description:
+      'Prepped vegetables and sauces for a quick Asian stir-fry meal.',
+    price: 5.49,
+    image_url: 'asian-stir-fry-kit.svg',
+  },
+  {
+    id: 28,
+    name: 'Portable Charcoal Grill',
+    description: 'Compact charcoal grill perfect for tailgating.',
+    price: 89.99,
+    image_url: 'portable-charcoal-grill.svg',
+  },
+  {
+    id: 29,
+    name: 'Portable Pet Bathing Tool',
+    description: 'Handheld sprayer designed for washing pets easily.',
+    price: 29.99,
+    image_url: 'portable-pet-bathing-tool.svg',
+  },
+  {
+    id: 30,
+    name: 'Classic White T-Shirt',
+    description:
+      'A timeless wardrobe staple crafted from soft cotton with a perfect fit.',
+    price: 19.99,
+    image_url: 'classic-white-tshirt.svg',
+  },
+];
+
+export default products;

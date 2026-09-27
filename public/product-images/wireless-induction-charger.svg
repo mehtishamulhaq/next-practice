@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef0fb"/><stop offset="1" stop-color="#d7dbf3"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<ellipse cx="200" cy="345" rx="140" ry="13" fill="#000" opacity=".13"/>
+<ellipse cx="200" cy="300" rx="120" ry="38" fill="#212121"/>
+<ellipse cx="200" cy="292" rx="120" ry="38" fill="#37474f"/>
+<ellipse cx="200" cy="290" rx="100" ry="30" fill="#263238"/>
+<g transform="rotate(-8 200 200)"><rect x="140" y="90" width="120" height="210" rx="20" fill="#111"/>
+<rect x="148" y="100" width="104" height="190" rx="14" fill="#3949ab"/>
+<rect x="148" y="100" width="104" height="190" rx="14" fill="url(#bg)" opacity=".25"/>
+<rect x="180" y="104" width="40" height="8" rx="4" fill="#111"/>
+<rect x="175" y="170" width="46" height="24" rx="4" fill="none" stroke="#fff" stroke-width="4"/><rect x="221" y="177" width="6" height="10" rx="2" fill="#fff"/>
+<path d="M196 174 l-8 12 h10 l-6 12" stroke="#76ff03" stroke-width="3" fill="none"/></g>
+<ellipse cx="200" cy="318" rx="128" ry="10" fill="#7c4dff" opacity=".35"/>
+<circle cx="300" cy="300" r="4" fill="#76ff03"/>
+</svg>

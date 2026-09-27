@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5f1ea"/><stop offset="1" stop-color="#e4dccd"/></linearGradient></defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<ellipse cx="200" cy="345" rx="120" ry="13" fill="#000" opacity=".13"/>
+<path d="M155 330 L155 215 Q155 170 186 160 L186 115 L214 115 L214 160 Q245 170 245 215 L245 330 Q245 345 230 345 L170 345 Q155 345 155 330 Z" fill="#3e2723"/>
+<rect x="182" y="85" width="36" height="36" rx="6" fill="#bfa46f"/>
+<rect x="155" y="230" width="90" height="100" fill="#f7f2e7"/>
+<text x="200" y="270" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#4e342e" text-anchor="middle" letter-spacing="1">BALSAMIC</text><text x="200" y="288" font-family="Helvetica, Arial, sans-serif" font-size="8.68" font-weight="400" fill="#4e342e" text-anchor="middle" letter-spacing="1">VINAIGRETTE</text>
+<rect x="165" y="210" width="10" height="150" rx="5" fill="#fff" opacity=".28"/><path d="M0 0 Q18 -16 36 0 Q18 16 0 0 Z" fill="#4caf50" transform="translate(265 320) rotate(-20)"/><path d="M0 0 Q18 -16 36 0 Q18 16 0 0 Z" fill="#66bb6a" transform="translate(290 330) rotate(20)"/><circle cx="100" cy="325" r="16" fill="#c62828"/><circle cx="125" cy="332" r="11" fill="#e53935"/>
+</svg>

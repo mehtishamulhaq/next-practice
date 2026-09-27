@@ -1,0 +1,14 @@
+import { Product } from '@/types';
+import ShopingCartItem from './shopping-cart-item';
+
+const ShoppingCartList = ({ products }: { products: Product[] }) => {
+  return (
+    <div>
+      {products.map((product) => (
+        <ShopingCartItem key={product.id} product={product} />
+      ))}
+    </div>
+  );
+};
+
+export default ShoppingCartList;
