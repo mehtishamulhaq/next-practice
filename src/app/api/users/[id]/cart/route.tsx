@@ -65,3 +65,41 @@ export async function POST(
     },
   });
 }
+
+// DELETE
+export async function DELETE(
+  request: NextRequest,
+  ctx: RouteContext<'/api/users/[id]/cart'>,
+) {
+  const { id: userId } = await ctx.params;
+  const num_userId = Number(userId);
+
+  const body: CartBody = await request.json();
+  const { productId } = body;
+
+  const userCart = carts[num_userId];
+
+  if (!userCart) {
+    return new Response('Users cart not foud', {
+      status: 404,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  } else {
+    const filterdProductIds = userCart.filter((id) => id !== productId);
+
+    carts[num_userId] = filterdProductIds;
+
+    const mappedProducts = filterdProductIds
+      .map((productId) => products.find((p) => p.id === productId))
+      .filter((p) => p !== undefined);
+
+    return new Response(JSON.stringify(mappedProducts), {
+      status: 202,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
+}
