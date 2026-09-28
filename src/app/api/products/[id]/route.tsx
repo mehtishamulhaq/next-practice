@@ -1,13 +1,15 @@
-import { products } from '@/constants';
 import { NextRequest } from 'next/server';
+import { connectToMongoDB } from '../../db';
 
 export async function GET(
   request: NextRequest,
   ctx: RouteContext<'/api/products/[id]'>,
 ) {
-  const { id: productId } = await ctx.params;
+  const { db } = await connectToMongoDB();
+  const { id } = await ctx.params;
+  const productId = Number(id);
 
-  const product = products.find((p) => p.id === Number(productId));
+  const product = await db.collection('products').findOne({ id: productId });
 
   if (!product) {
     return new Response('Product not found', { status: 404 });
