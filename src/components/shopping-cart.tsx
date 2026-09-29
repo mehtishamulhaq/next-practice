@@ -1,16 +1,15 @@
-'use client';
-
-import products from '@/constants/product-data';
-import { useState } from 'react';
-import ShoppingCartList from './shopping-cart-list';
 import Link from 'next/link';
+import ShoppingCartList from './shopping-cart-list';
+import { getUserCart } from '@/actions/cart';
+import { APP_CONSTANTS } from '@/constants';
 
-const ShoppingCart = () => {
-  const [cartIds] = useState([1, 5]);
+const ShoppingCart = async () => {
+  const response = await getUserCart(APP_CONSTANTS.CURRRENT_USER_ID);
 
-  const cartProducts = cartIds
-    .map((id) => products.find((p) => p.id === id))
-    .filter((p) => p !== undefined);
+  if (response?.status == 'error') {
+    return <h1>Uable to load products!</h1>;
+  }
+  const cartProducts = response.data;
 
   if (!cartProducts.length) {
     return (

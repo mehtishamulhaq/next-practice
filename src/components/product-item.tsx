@@ -1,6 +1,9 @@
+'use client';
+
 import { Product } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
+import AddToCart from './add-to-cart-button';
 
 const ProductItem = ({ product }: { product: Product }) => {
   return (
@@ -21,7 +24,10 @@ const ProductItem = ({ product }: { product: Product }) => {
         <p className="text-gray-600 leading-snug flex-1">
           {product.description}
         </p>
-        <p className="text-xl font-semibold">{`$ ${product.price}`}</p>
+        <div className="flex justify-between">
+          <span className="text-xl font-semibold">{`$ ${product.price}`}</span>
+          <AddToCart productId={product.id} />
+        </div>
       </div>
     </Link>
   );

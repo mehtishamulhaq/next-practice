@@ -1,0 +1,6 @@
+const APP_CONSTANTS = {
+  CURRRENT_USER_ID: 2,
+  TIMEOUT: 1000,
+};
+
+export default APP_CONSTANTS;

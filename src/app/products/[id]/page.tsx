@@ -6,6 +6,7 @@ const ProductDetails = async ({
   params: Promise<{ id: string }>;
 }) => {
   const { id } = await params;
+
   return <ProdectDetail id={Number(id)} />;
 };
 
