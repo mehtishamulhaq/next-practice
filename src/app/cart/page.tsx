@@ -1,11 +1,7 @@
 import ShoppingCart from '@/components/shopping-cart';
 
 const Cart = () => {
-  return (
-    <>
-      <ShoppingCart />
-    </>
-  );
+  return <ShoppingCart />;
 };
 
 export default Cart;

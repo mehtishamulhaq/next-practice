@@ -1,7 +1,8 @@
 import ProductList from '@/components/product-list';
-import products from '@/constants/product-data';
 
-const Products = () => {
+const Products = async () => {
+  const response = await fetch(`${process.env.API_URL}/api/products`);
+  const products = await response.json();
   return <ProductList products={products} />;
 };
 

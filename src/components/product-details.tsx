@@ -1,12 +1,14 @@
 import NotFoundPage from '@/app/not-found';
-import products from '@/constants/product-data';
 import Image from 'next/image';
 
-const prodectDetail = ({ id }: { id: number }) => {
-  const product = products.find((item) => item.id === id);
+const prodectDetail = async ({ id }: { id: number }) => {
+  const response = await fetch(`${process.env.API_URL}/api/products/${id}`);
+  const product = await response.json();
+
   if (!product) {
     return <NotFoundPage />;
   }
+
   return (
     <div className="p-8 flex flex-row gap-4">
       <Image
