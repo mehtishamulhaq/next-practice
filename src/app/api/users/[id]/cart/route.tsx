@@ -55,7 +55,7 @@ export async function POST(
     .collection<Cart>('carts')
     .findOneAndUpdate(
       { userId },
-      { $push: { cartIds: productId } },
+      { $addToSet: { cartIds: productId } },
       { upsert: true, returnDocument: 'after' },
     );
 

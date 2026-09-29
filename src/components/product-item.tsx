@@ -3,7 +3,7 @@
 import { Product } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
-import AddToCart from './AddToCart';
+import CartButton from './CartButton';
 
 const ProductItem = ({ product }: { product: Product }) => {
   return (
@@ -24,9 +24,9 @@ const ProductItem = ({ product }: { product: Product }) => {
         <p className="text-gray-600 leading-snug flex-1">
           {product.description}
         </p>
-        <div className="flex justify-between">
+        <div className="flex items-center justify-between">
           <span className="text-xl font-semibold">{`$ ${product.price}`}</span>
-          <AddToCart productId={product.id} />
+          <CartButton productId={product.id} />
         </div>
       </div>
     </Link>

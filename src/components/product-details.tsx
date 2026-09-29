@@ -1,7 +1,7 @@
 import NotFoundPage from '@/app/not-found';
 import Image from 'next/image';
 import { getProductById } from '@/actions/products';
-import AddToCart from './AddToCart';
+import CartButton from './CartButton';
 
 const prodectDetail = async ({ id }: { id: number }) => {
   const response = await getProductById(Number(id));
@@ -29,7 +29,7 @@ const prodectDetail = async ({ id }: { id: number }) => {
           {product.description}
         </p>
         <p className="text-3xl font-semibold">{`$ ${product.price}`}</p>
-        <AddToCart productId={product.id} className="self-start" />
+        <CartButton productId={product.id} variant="full" className="self-start" />
       </div>
     </div>
   );

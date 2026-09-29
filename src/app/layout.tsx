@@ -1,5 +1,9 @@
 import type { Metadata } from 'next';
 import { NavBar } from '@/components';
+import { CartProvider } from '@/providers';
+import { getUserCart } from '@/actions/cart';
+import { APP_CONSTANTS } from '@/constants';
+import { Product } from '@/types';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 
@@ -18,15 +22,23 @@ export const metadata: Metadata = {
   description: 'A small Next.js shopping practice app',
 };
 
-export default function RootLayout({ children }: LayoutProps<'/'>) {
+export default async function RootLayout({ children }: LayoutProps<'/'>) {
+  const cart = await getUserCart(APP_CONSTANTS.CURRRENT_USER_ID);
+  const cartIds: number[] =
+    cart.status === 'success' && Array.isArray(cart.data)
+      ? cart.data.map((product: Product) => product.id)
+      : [];
+
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <NavBar />
-        {children}
+        <CartProvider initialIds={cartIds}>
+          <NavBar />
+          {children}
+        </CartProvider>
       </body>
     </html>
   );
