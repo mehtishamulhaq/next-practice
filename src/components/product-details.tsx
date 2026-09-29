@@ -1,7 +1,7 @@
 import NotFoundPage from '@/app/not-found';
 import Image from 'next/image';
 import { getProductById } from '@/actions/products';
-import AddToCart from './add-to-cart-button';
+import AddToCart from './AddToCart';
 
 const prodectDetail = async ({ id }: { id: number }) => {
   const response = await getProductById(Number(id));

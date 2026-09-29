@@ -3,7 +3,7 @@
 import { Product } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
-import AddToCart from './add-to-cart-button';
+import AddToCart from './AddToCart';
 
 const ProductItem = ({ product }: { product: Product }) => {
   return (

@@ -5,7 +5,7 @@ import { APP_URLs } from '@/constants';
 
 const getUserCart = async (userId: number) => {
   try {
-    const response = await fetch(APP_URLs.getUserCart(userId), {
+    const response = await fetch(APP_URLs.getcartUrl(userId), {
       cache: 'no-cache',
     });
     const cartProducts = await response.json();
@@ -24,7 +24,7 @@ const getUserCart = async (userId: number) => {
 
 const addToCart = async (userId: number, productId: number) => {
   try {
-    const response = await fetch(APP_URLs.addToCart(userId), {
+    const response = await fetch(APP_URLs.getcartUrl(userId), {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -46,4 +46,28 @@ const addToCart = async (userId: number, productId: number) => {
   }
 };
 
-export { getUserCart, addToCart };
+const removeFromCart = async (userId: number, productId: number) => {
+  try {
+    const response = await fetch(APP_URLs.getcartUrl(userId), {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ productId }),
+    });
+    const cartProducts = await response.json();
+    revalidatePath('/cart');
+
+    return {
+      status: 'success',
+      data: cartProducts,
+    };
+  } catch (error) {
+    return {
+      status: 'error',
+      message: `${error}` || 'Something went wrong!',
+    };
+  }
+};
+
+export { getUserCart, addToCart, removeFromCart };

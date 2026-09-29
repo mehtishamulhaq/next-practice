@@ -36,7 +36,7 @@ const AddToCart = ({
       disabled={isPending}
       className={`text-lg text-blue-500 disabled:opacity-50 ${className}`}
     >
-      {isPending ? 'Adding…' : label}
+      {isPending ? '...' : label}
     </button>
   );
 };
