@@ -2,6 +2,7 @@ import { Product } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import CartButton from './CartButton';
+import { formatPrice } from '@/lib/format';
 
 const ShoppingCartItem = ({ product }: { product: Product }) => {
   return (
@@ -21,7 +22,7 @@ const ShoppingCartItem = ({ product }: { product: Product }) => {
         <h2 className="text-2xl">{product.name}</h2>
         <p className="text-gray-600 leading-snug">{product.description}</p>
         <div className="flex items-center justify-between">
-          <p className="text-xl font-semibold">{`$ ${product.price}`}</p>
+          <p className="text-xl font-semibold">{formatPrice(product.price)}</p>
           <CartButton productId={product.id} />
         </div>
       </div>
