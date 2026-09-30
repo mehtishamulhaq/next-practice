@@ -2,6 +2,8 @@ import ProductList from '@/components/product-list';
 import StatusMessage from '@/components/status-message';
 import { getAllProducts } from '@/actions/products';
 
+export const dynamic = 'force-dyamic';
+
 const Products = async () => {
   const response = await getAllProducts();
 
