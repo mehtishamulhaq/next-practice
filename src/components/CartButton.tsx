@@ -21,7 +21,8 @@ const BASE_STYLES =
 const VARIANT_STYLES: Record<CartButtonVariant, Record<CartAction, string>> = {
   icon: {
     add: 'rounded-full p-2 text-blue-500 hover:bg-slate-200 hover:text-blue-700',
-    remove: 'rounded-full p-2 text-red-500 hover:bg-slate-200 hover:text-red-700',
+    remove:
+      'rounded-full p-2 text-red-500 hover:bg-slate-200 hover:text-red-700',
   },
   text: {
     add: 'rounded-md px-2 py-1 text-sm font-medium text-blue-600 hover:bg-blue-50 hover:text-blue-700',
@@ -71,8 +72,8 @@ const CartButton = ({
       title={visibleText ? undefined : label}
       className={`${BASE_STYLES} ${VARIANT_STYLES[variant][action]} ${className}`}
     >
+      {visibleText && <span className="leading-none">{visibleText}</span>}
       <Icon />
-      {visibleText && <span>{visibleText}</span>}
     </button>
   );
 };

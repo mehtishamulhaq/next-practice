@@ -22,7 +22,7 @@ const ShoppingCartItem = ({ product }: { product: Product }) => {
         <p className="text-gray-600 leading-snug">{product.description}</p>
         <div className="flex items-center justify-between">
           <p className="text-xl font-semibold">{`$ ${product.price}`}</p>
-          <CartButton productId={product.id} variant="text" />
+          <CartButton productId={product.id} />
         </div>
       </div>
     </Link>
