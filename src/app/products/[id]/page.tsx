@@ -1,6 +1,6 @@
 import ProdectDetail from '@/components/product-details';
 
-export const dynamic = 'force-dyamic';
+export const dynamic = 'force-dynamic';
 
 const ProductDetails = async ({
   params,
