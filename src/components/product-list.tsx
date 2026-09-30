@@ -3,7 +3,7 @@ import ProductItem from './product-item';
 
 const ProductList = ({ products }: { products: Product[] }) => {
   return (
-    <div className="flex flex-col mx-auto sm:flex-row sm:flex-wrap">
+    <div className="grid grid-cols-[repeat(auto-fill,15rem)] justify-center gap-12 px-6 pb-12">
       {products.map((product) => (
         <ProductItem key={product.id} product={product} />
       ))}

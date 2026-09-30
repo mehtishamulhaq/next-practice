@@ -9,7 +9,7 @@ const NavBar = () => {
   console.log('pathName', pathName);
 
   return (
-    <nav className="flex w-screen items-center justify-end  px-20 py-2 mb-8 shadow-xl bg-white sticky  top-0">
+    <nav className="flex h-(--navbar-height) w-screen items-center justify-end  px-20 py-2 mb-8 shadow-xl bg-white sticky  top-0">
       {navbarData.map((navItem) => {
         const Icon = navItem.icon;
         const isActive = pathName === navItem.link;

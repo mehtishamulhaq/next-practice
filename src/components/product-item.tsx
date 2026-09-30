@@ -10,7 +10,7 @@ const ProductItem = ({ product }: { product: Product }) => {
     <Link
       key={product.id}
       href={`/products/${product.id}`}
-      className="m-6  w-60 bg-slate-100 ring-2 ring-slate-200 rounded-lg flex flex-col gap-3 shadow-xl shadow-slate-200"
+      className="w-60 bg-slate-100 ring-2 ring-slate-200 rounded-lg flex flex-col gap-3 shadow-xl shadow-slate-200"
     >
       <Image
         className="rounded-lg w-full flex-3"
