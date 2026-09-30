@@ -1,17 +1,16 @@
-import { APP_URLs } from '@/constants';
+import { getProducts, getProduct } from '@/lib/data/products';
 
 const getAllProducts = async () => {
   try {
-    const response = await fetch(APP_URLs.getAllProducts());
-    const products = await response.json();
+    const products = await getProducts();
 
     return {
-      status: 'success',
+      status: 'success' as const,
       data: products,
     };
   } catch (error) {
     return {
-      status: 'error',
+      status: 'error' as const,
       message: `${error}` || 'Something went wrong!',
     };
   }
@@ -19,16 +18,15 @@ const getAllProducts = async () => {
 
 const getProductById = async (productId: number) => {
   try {
-    const response = await fetch(APP_URLs.getProductById(productId));
-    const product = await response.json();
+    const product = await getProduct(productId);
 
     return {
-      status: 'success',
+      status: 'success' as const,
       data: product,
     };
   } catch (error) {
     return {
-      status: 'error',
+      status: 'error' as const,
       message: `${error}` || 'Something went wrong!',
     };
   }

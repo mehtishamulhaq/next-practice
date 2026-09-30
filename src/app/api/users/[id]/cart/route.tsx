@@ -1,75 +1,41 @@
 import { NextRequest } from 'next/server';
-import { connectToMongoDB } from '@/app/api/db';
+import {
+  getCartProducts,
+  addProductToCart,
+  removeProductFromCart,
+} from '@/lib/data/cart';
 
 type CartBody = {
   productId: number;
-};
-
-type Cart = {
-  userId: number;
-  cartIds: number[];
 };
 
 export async function GET(
   request: NextRequest,
   ctx: RouteContext<'/api/users/[id]/cart'>,
 ) {
-  const { db } = await connectToMongoDB();
   const { id } = await ctx.params;
-  const userId = Number(id);
+  const cartProducts = await getCartProducts(Number(id));
 
-  const userCart = await db
-    .collection<Cart>('carts')
-    .findOne({ userId: userId });
-
-  if (!userCart) {
+  if (!cartProducts) {
     return new Response('User has no items in their Cart!', { status: 404 });
   }
 
-  const cartIds = userCart.cartIds;
-  const cartProducts = await db
-    .collection('products')
-    .find({ id: { $in: cartIds } })
-    .toArray();
-
-  return new Response(JSON.stringify(cartProducts), {
-    status: 200,
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+  return Response.json(cartProducts);
 }
 
 export async function POST(
   request: NextRequest,
   ctx: RouteContext<'/api/users/[id]/cart'>,
 ) {
-  const { db } = await connectToMongoDB();
   const { id } = await ctx.params;
-  const userId = Number(id);
-
   const body: CartBody = await request.json();
-  const productId = Number(body.productId);
 
-  const updatedCart = await db
-    .collection<Cart>('carts')
-    .findOneAndUpdate(
-      { userId },
-      { $addToSet: { cartIds: productId } },
-      { upsert: true, returnDocument: 'after' },
-    );
+  const cartProducts = await addProductToCart(
+    Number(id),
+    Number(body.productId),
+  );
 
-  const cartProducts = await db
-    .collection('products')
-    .find({ id: { $in: updatedCart?.cartIds ?? [] } })
-    .toArray();
-
-  return new Response(JSON.stringify(cartProducts), {
-    status: 201,
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+  return Response.json(cartProducts, { status: 201 });
 }
 
 // DELETE
@@ -77,34 +43,17 @@ export async function DELETE(
   request: NextRequest,
   ctx: RouteContext<'/api/users/[id]/cart'>,
 ) {
-  const { db } = await connectToMongoDB();
   const { id } = await ctx.params;
-  const userId = Number(id);
-
   const body: CartBody = await request.json();
-  const productId = Number(body.productId);
 
-  const updatedCart = await db
-    .collection<Cart>('carts')
-    .findOneAndUpdate(
-      { userId },
-      { $pull: { cartIds: productId } },
-      { returnDocument: 'after' },
-    );
+  const cartProducts = await removeProductFromCart(
+    Number(id),
+    Number(body.productId),
+  );
 
-  if (!updatedCart) {
+  if (!cartProducts) {
     return new Response('Cart not found', { status: 404 });
   }
 
-  const cartProducts = await db
-    .collection('products')
-    .find({ id: { $in: updatedCart.cartIds } })
-    .toArray();
-
-  return new Response(JSON.stringify(cartProducts), {
-    status: 200,
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+  return Response.json(cartProducts);
 }

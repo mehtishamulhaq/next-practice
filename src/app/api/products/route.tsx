@@ -1,13 +1,7 @@
-import { connectToMongoDB } from '../db';
+import { getProducts } from '@/lib/data/products';
 
 export async function GET() {
-  const { db } = await connectToMongoDB();
-  const products = await db.collection('products').find({}).toArray();
+  const products = await getProducts();
 
-  return new Response(JSON.stringify(products), {
-    status: 200,
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
+  return Response.json(products);
 }

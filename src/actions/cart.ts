@@ -1,22 +1,23 @@
 'use server';
 
 import { revalidatePath } from 'next/cache';
-import { APP_URLs } from '@/constants';
+import {
+  getCartProducts,
+  addProductToCart,
+  removeProductFromCart,
+} from '@/lib/data/cart';
 
 const getUserCart = async (userId: number) => {
   try {
-    const response = await fetch(APP_URLs.getcartUrl(userId), {
-      cache: 'no-cache',
-    });
-    const cartProducts = await response.json();
+    const cartProducts = await getCartProducts(userId);
 
     return {
-      status: 'success',
-      data: cartProducts,
+      status: 'success' as const,
+      data: cartProducts ?? [],
     };
   } catch (error) {
     return {
-      status: 'error',
+      status: 'error' as const,
       message: `${error}` || 'Something went wrong!',
     };
   }
@@ -24,23 +25,16 @@ const getUserCart = async (userId: number) => {
 
 const addToCart = async (userId: number, productId: number) => {
   try {
-    const response = await fetch(APP_URLs.getcartUrl(userId), {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ productId }),
-    });
-    const cartProducts = await response.json();
+    const cartProducts = await addProductToCart(userId, productId);
     revalidatePath('/cart');
 
     return {
-      status: 'success',
+      status: 'success' as const,
       data: cartProducts,
     };
   } catch (error) {
     return {
-      status: 'error',
+      status: 'error' as const,
       message: `${error}` || 'Something went wrong!',
     };
   }
@@ -48,23 +42,16 @@ const addToCart = async (userId: number, productId: number) => {
 
 const removeFromCart = async (userId: number, productId: number) => {
   try {
-    const response = await fetch(APP_URLs.getcartUrl(userId), {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ productId }),
-    });
-    const cartProducts = await response.json();
+    const cartProducts = await removeProductFromCart(userId, productId);
     revalidatePath('/cart');
 
     return {
-      status: 'success',
-      data: cartProducts,
+      status: 'success' as const,
+      data: cartProducts ?? [],
     };
   } catch (error) {
     return {
-      status: 'error',
+      status: 'error' as const,
       message: `${error}` || 'Something went wrong!',
     };
   }
