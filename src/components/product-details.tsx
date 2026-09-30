@@ -2,11 +2,18 @@ import NotFoundPage from '@/app/not-found';
 import Image from 'next/image';
 import { getProductById } from '@/actions/products';
 import CartButton from './CartButton';
+import StatusMessage from './status-message';
 
 const prodectDetail = async ({ id }: { id: number }) => {
   const response = await getProductById(Number(id));
   if (response?.status == 'error') {
-    return <h1>Uable to load products!</h1>;
+    return (
+      <StatusMessage
+        title="Unable to load product!"
+        description="We couldn't fetch this product. Please try again later."
+        action={{ label: 'Back to Products', href: '/products' }}
+      />
+    );
   }
   const product = response.data;
 

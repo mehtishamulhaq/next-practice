@@ -1,9 +1,9 @@
-import Link from 'next/link';
 import ShoppingCartList from './shopping-cart-list';
 import { getUserCart } from '@/actions/cart';
 import { APP_CONSTANTS } from '@/constants';
 import { Product } from '@/types';
 import ShoppingCartHeader from './shopping-cart-header';
+import StatusMessage from './status-message';
 
 const CART_COLUMN = 'mx-4 sm:ml-auto sm:mr-10 sm:w-140';
 
@@ -11,7 +11,12 @@ const ShoppingCart = async () => {
   const response = await getUserCart(APP_CONSTANTS.CURRRENT_USER_ID);
 
   if (response?.status == 'error') {
-    return <h1>Uable to load products!</h1>;
+    return (
+      <StatusMessage
+        title="Unable to load your cart!"
+        description="Something went wrong while fetching your cart. Please try again later."
+      />
+    );
   }
   const cartProducts = response.data;
   const totalItems = cartProducts.length;
@@ -22,12 +27,12 @@ const ShoppingCart = async () => {
 
   if (!cartProducts.length) {
     return (
-      <>
-        <h1>
-          The cart is empty please add the products from the products page
-        </h1>
-        <Link href="/products">Go to Products Page</Link>
-      </>
+      <StatusMessage
+        variant="info"
+        title="Your cart is empty"
+        description="Add some products from the products page to see them here."
+        action={{ label: 'Go to Products', href: '/products' }}
+      />
     );
   }
 

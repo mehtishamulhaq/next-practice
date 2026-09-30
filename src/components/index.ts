@@ -6,3 +6,4 @@ export { default as ShoppingCart } from './shopping-cart';
 export { default as ShoppingCartList } from './shopping-cart-list';
 export { default as ShoppingCartItem } from './shopping-cart-item';
 export { default as CartButton } from './CartButton';
+export { default as StatusMessage } from './status-message';
