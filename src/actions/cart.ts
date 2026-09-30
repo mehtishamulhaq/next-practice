@@ -16,6 +16,7 @@ const getUserCart = async (userId: number) => {
       data: cartProducts ?? [],
     };
   } catch (error) {
+    console.error(error);
     return {
       status: 'error' as const,
       message: `${error}` || 'Something went wrong!',
@@ -33,6 +34,7 @@ const addToCart = async (userId: number, productId: number) => {
       data: cartProducts,
     };
   } catch (error) {
+    console.error(error);
     return {
       status: 'error' as const,
       message: `${error}` || 'Something went wrong!',
@@ -50,6 +52,7 @@ const removeFromCart = async (userId: number, productId: number) => {
       data: cartProducts ?? [],
     };
   } catch (error) {
+    console.error(error);
     return {
       status: 'error' as const,
       message: `${error}` || 'Something went wrong!',

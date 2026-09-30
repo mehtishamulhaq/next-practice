@@ -9,6 +9,7 @@ const getAllProducts = async () => {
       data: products,
     };
   } catch (error) {
+    console.error(error);
     return {
       status: 'error' as const,
       message: `${error}` || 'Something went wrong!',
@@ -25,6 +26,7 @@ const getProductById = async (productId: number) => {
       data: product,
     };
   } catch (error) {
+    console.error(error);
     return {
       status: 'error' as const,
       message: `${error}` || 'Something went wrong!',
